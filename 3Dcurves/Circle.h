@@ -34,5 +34,7 @@ public:
 	{
 		return R;
 	}
+
+	~Circle3D() {};
 };
 

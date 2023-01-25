@@ -34,4 +34,6 @@ public:
 	{
 		return B;
 	}
+
+	~Ellipse3D() {};
 };

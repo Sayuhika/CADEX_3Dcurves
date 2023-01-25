@@ -36,4 +36,6 @@ public:
 	{
 		return R;
 	}
+
+	~Helix3D() {};
 };

@@ -26,6 +26,7 @@ struct CURVES3D_API Point3D
 		
 		return s.str();
 	};
+	~Point3D() {};
 };
 
 /// <summary>
@@ -66,6 +67,7 @@ public:
 	virtual Point3D GetDer(double t) = 0;
 	virtual double GetRx() = 0;
 	virtual double GetRy() = 0;
+	virtual ~Curve3D() {};
 };
 
 std::vector<std::shared_ptr<Curve3D>> CURVES3D_API GetRandCurves(size_t count);
