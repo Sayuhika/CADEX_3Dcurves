@@ -16,20 +16,18 @@ int main(int argc, char *argv[])
     
     // Table column names of curves array
     cout << endl << "Curves array:" << endl;
-    cout 
-        << setw(7) << left << setfill(' ') << "Number"
-        << setw(10) << left << setfill(' ') << "Type"
-        << setw(40) << left << setfill(' ') << "Coords"
-        << setw(40) << left << setfill(' ') << "Derivative" << endl;
+    cout << setw(7)  << left << setfill(' ') << "Number"
+         << setw(10) << left << setfill(' ') << "Type"
+         << setw(40) << left << setfill(' ') << "Coords"
+         << setw(40) << left << setfill(' ') << "Derivative" << endl;
 
     // Data-rows of the table
     for (size_t i = 0; i < curves.size(); i++)
     {
-        cout 
-            << setw(7) << left << setfill(' ') << i 
-            << setw(10) << left << setfill(' ') << EnumCurveTypeToString(curves[i]->GetType()) 
-            << setw(40) << left << setfill(' ') << curves[i]->GetPos(M_PI_D4).ToString() 
-            << setw(40) << left << setfill(' ') << curves[i]->GetDer(M_PI_D4).ToString() << endl;
+        cout << setw(7)  << left << setfill(' ') << i 
+             << setw(10) << left << setfill(' ') << EnumCurveTypeToString(curves[i]->GetType()) 
+             << setw(40) << left << setfill(' ') << curves[i]->GetPos(M_PI_D4).ToString() 
+             << setw(40) << left << setfill(' ') << curves[i]->GetDer(M_PI_D4).ToString() << endl;
 
         // Filling the array only with curves of the CIRCLE type
         if ((curves[i]->GetType() == CIRCLE))
